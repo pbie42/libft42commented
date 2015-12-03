@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 18:15:59 by pbie              #+#    #+#             */
-/*   Updated: 2015/12/02 22:51:37 by pbie             ###   ########.fr       */
+/*   Updated: 2015/12/03 16:49:07 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void		ft_strclr(char *s)
 	 position to '\0'. This may seem like it should end the loop but because we
 	 increase the i variable after it moves to the next character that should 
 	 exist. Thus continuing the loop until the end.*/
+	i = 0;
 	while (s[i] != '\0')
 	{
 		s[i] = '\0';
