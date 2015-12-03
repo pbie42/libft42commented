@@ -6,21 +6,21 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 20:01:57 by pbie              #+#    #+#             */
-/*   Updated: 2015/12/02 22:34:53 by pbie             ###   ########.fr       */
+/*   Updated: 2015/12/03 17:18:25 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 	/*This is a recreation of the atoi function in C. We take a string of
-	 *characters that are supposed to be a number converted into an int.
-	 According to the man, "The atoi function converts the initial portion of
-	 the string point to by str to int representation."*/
+	 * characters that are supposed to be a number converted into an int.
+	 * According to the man, "The atoi function converts the initial portion of
+	 * the string point to by str to int representation."*/
 
 int			ft_atoi(const char *str)
 {
 	/*We start off by creating three variables. The first is what will hold our
-	 *result that is to be returned. We use long because it is guaranteed to
+	 result that is to be returned. We use long because it is guaranteed to
 	 be able to store, at the very least, values that lie within the range of
 	 -2147483647 and 2147483647. Sign will be what we use to turn the int
 	 negative in the event that its a negative number that is put in the string.
@@ -54,8 +54,8 @@ int			ft_atoi(const char *str)
 		i++;
 	}
 	/*Here we convert our string of characters from char to int so long as they
-	 *are numbers. If the character we are currently on is a number, we converted
-	 it to its ascii numberical value. For the first character res is always set
+	 are numbers. If the character we are currently on is a number, we converted
+	 it to its ascii numerical value. For the first character res is always set
 	 currently at 0. We multiply 10 immediately by our res to set up the digit
 	 placement where it should be. We then subtract the numerical value of the
 	 character 0 on the ascii table from our currently character number. This
