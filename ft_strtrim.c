@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 19:00:25 by pbie              #+#    #+#             */
-/*   Updated: 2015/12/04 18:04:29 by pbie             ###   ########.fr       */
+/*   Updated: 2015/12/04 18:40:26 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,15 @@ char		*ft_strtrim(char const *s)
 	str = (char *)malloc(sizeof(char) * (j - i + 2));
 	if (str == NULL)
 		return (NULL);
-
+	/*We now begin our final loop which will place a trimmed version of the
+	 * string s into our fresh str string. We do a loop while k, which we
+	 * set earlier to 0, is less than j minus i plus 1, which we do to make
+	 * sure we do the full length of the portion that we want of s. Inside 
+	 * the loop we take the index position in s that is the start of our trim
+	 * and add k to that index so we will increment from that position. We then
+	 * place the corresponding character into our new string. We run the loop
+	 * until we reach the end of the portion of s that we want and then we exit
+	 * the loop. We then add a terminating '\0' and return our trimmed string.*/
 	while (k < j - i + 1)
 	{
 		str[k] = s[i + k];
