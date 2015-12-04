@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 19:00:25 by pbie              #+#    #+#             */
-/*   Updated: 2015/12/04 18:01:55 by pbie             ###   ########.fr       */
+/*   Updated: 2015/12/04 18:04:29 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,14 @@ char		*ft_strtrim(char const *s)
 	 * found our spacing at the end of the string, and then we are adding 2
 	 * to that result. We do this because of how the counters work. They will
 	 * place their index position on the character that stopped their
-	 * incrementation and their decrementation. */
+	 * incrementation and their decrementation. You add the 2 to bring you back
+	 * to the length of the string you will be returning plus the space for the
+	 * terminating '\0'. We then check to make sure our memory allocation
+	 * worked. If not we return NULL.*/
 	str = (char *)malloc(sizeof(char) * (j - i + 2));
 	if (str == NULL)
 		return (NULL);
+
 	while (k < j - i + 1)
 	{
 		str[k] = s[i + k];
