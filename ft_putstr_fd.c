@@ -20,7 +20,8 @@
  * use the fd parameter as the first parameter in our write function. We then
  * place our string as write's next parameter. Last we use ft_strlen on our
  * string so we know how many bytes will need to be written, which is the same
- * as the length of the given string.*/
+ * as the length of the given string. Write will then write string s to the
+ * desired output.*/
 
 void		ft_putstr_fd(char const *s, int fd)
 {
