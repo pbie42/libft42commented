@@ -17,7 +17,7 @@
  * the parameter. Negative numbers should be managed as well. If the allocation
  * fails the function will return NULL. NOTE: This is a recursive function. If
  * you are unfamiliar with recursive functions it is a function which either
- * calls itself os is a in a potential cycle of function calls.*/
+ * calls itself or is a in a potential cycle of function calls.*/
 
 char		*ft_itoa(int n)
 {
