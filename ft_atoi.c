@@ -20,16 +20,17 @@
 int			ft_atoi(const char *str)
 {
 	/*We start off by creating three variables. The first is what will hold our
-	 result that is to be returned. We use long because it is guaranteed to
-	 be able to store, at the very least, values that lie within the range of
-	 -2147483647 and 2147483647. Sign will be what we use to turn the int
-	 negative in the event that its a negative number that is put in the string.
-	 We have it as a long so we can multiply our result by it in the end. We 
-	 next have an unsigned int i, which will be the counter for our string.
-	 In order to be able to compensate for an incredibly long string we use an
-	 unsigned int to be able to use its extended positive range it has over a 
-	 signed int. We will set all of them to 0 except for our sign which we set
-	 at 1 to use based based on the appearance of a negative symbol in our string*/
+	 * result that is to be returned. We use long because it is guaranteed to
+	 * be able to store, at the very least, values that lie within the range of
+	 * -2147483647 and 2147483647. Sign will be what we use to turn the int
+	 * negative in the event that its a negative number that is put in the
+	 * string. We have it as a long so we can multiply our result by it in the
+	 * end. We next have an unsigned int i, which will be the counter for our
+	 * string. In order to be able to compensate for an incredibly long string
+	 * we use an unsigned int to be able to use its extended positive range it
+	 * has over a signed int. We will set all of them to 0 except for our sign
+	 * which we set at 1 to use based based on the appearance of a negative
+	 * symbol in our string*/
 	long			res;
 	long			sign;
 	unsigned int	i;
@@ -54,21 +55,22 @@ int			ft_atoi(const char *str)
 		i++;
 	}
 	/*Here we convert our string of characters from char to int so long as they
-	 are numbers. If the character we are currently on is a number, we converted
-	 it to its ascii numerical value. For the first character res is always set
-	 currently at 0. We multiply 10 immediately by our res to set up the digit
-	 placement where it should be. We then subtract the numerical value of the
-	 character 0 on the ascii table from our currently character number. This
-	 sets it to its ascii numerical value. We then start our loop over and 
-	 continue until we hit a character that is not a number.*/
+	 * are numbers. If the character we are currently on is a number, we
+	 * converted it to its ascii numerical value. For the first character res
+	 * is always set currently at 0. We multiply 10 immediately by our res to
+	 * set up the digit placement where it should be. We then subtract the
+	 * numerical value of the character 0 on the ascii table from our currently
+	 * character number. This sets it to its ascii numerical value. We then
+	 * start our loop over and continue until we hit a character that is not a
+	 * number.*/
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		res = res * 10 + str[i] - '0';
 		i++;
 	}
 	/*Last we return the res value multiplied by the sign value to return the
-	 *number based on whether it was negative or not. NOTE: We have int in
-	 parenthesis to cast the rest * sign into a int so it can be returned as
-	 an int.*/
+	 * number based on whether it was negative or not. NOTE: We have int in
+	 * parenthesis to cast the rest * sign into a int so it can be returned as
+	 * an int.*/
 	return ((int)(res * sign));
 }
