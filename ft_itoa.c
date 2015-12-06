@@ -82,7 +82,7 @@ char		*ft_itoa(int n)
 	 * each individual number. Since both numbers are a value less than 10 but
 	 * greater than 0 we will convert them each into a string. So at this point
 	 * we now have the strings "1\0", "2\0", and from our earlier call of 
-	 * ft_itoa(123 % 10) we have the string "3\0". Since we have reached an 
+	 * ft_itoa(123 % 10) we have the string "3\0". Since we have reached an end
 	 * return point for our recursion we will be combining first the strings
 	 * "1\0" and "2\0" inside the ft_strjoin function they are currently inside
 	 * making them into the string "12\0". This brings us back up a level in 
