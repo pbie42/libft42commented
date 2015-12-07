@@ -19,16 +19,16 @@
 
 void		*ft_memmove(void *dst, const void *src, size_t len)
 {
-	/*We start by char pointer variable tmp which we will use to move len bytes
-	 * of src into and then we will move the len bytes of src we placed into
-	 * tmp into dst. We do this using our ft_memcpy function. But before we do
-	 * this we have to make sure to allocate memory for tmp to be able to hold
-	 * the bytes of src to move them to dst. We use our given len parameter to
-	 * determine the size of the malloc for tmp. If the allocation fails we
-	 * will return NULL. If not we will go ahead and use ft_memcpy first on tmp,
-	 * src, and len, and then we will call it again on dst, tmp, and len. Once
-	 * our memory move is finished we will then free the memory we allocated
-	 * for tmp. And last we will return the original value of dst.*/
+	/*We start by creating a char pointer variable tmp which we will use to 
+	 * move len bytes of src into and then we will move the len bytes of src we
+	 * placed into tmp into dst. We do this using our ft_memcpy function. But 
+	 * before we do this we have to make sure to allocate memory for tmp to be 
+	 * able to hold the bytes of src to move them to dst. We use our given len 
+	 * parameter to determine the size of the malloc for tmp. If the allocation 
+	 * fails we will return NULL. If not we will go ahead and use ft_memcpy 
+	 * first on tmp, src, and len, and then we will call it again on dst, tmp, 
+	 * and len. Once our memory move is finished we will then free the memory 
+	 * we allocated for tmp. And last we will return the original value of dst.*/
 	char	*tmp;
 
 	tmp = (char *)malloc(sizeof(char) * len);
